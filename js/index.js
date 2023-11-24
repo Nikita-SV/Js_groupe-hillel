@@ -47,7 +47,7 @@ if (numOne === numTwo){
 
 /* */
 let entryNum = prompt ('Enter five number');
-if (entryNum < 10000 || entryNum > 99999 || isNaN(entryNum) ){
+if (entryNum < 1000 || entryNum > 99999 || isNaN(entryNum) ){
     alert(`Error, entered a number exceeding five digits`)
 }
 else{
