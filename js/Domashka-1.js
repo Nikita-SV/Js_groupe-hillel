@@ -1,14 +1,13 @@
 // ------------ 1 Task ------------
 
 let firstName = prompt('What is your name?');
-if(Number(firstName) || typeof firstName === number){
-    alert(`Write you are Name`)
-}else if(String(firstName)){
-    alert(`Hello, ${firstName}! How are you?`)
+if(!isNaN(firstName) || firstName === "" || firstName === null){
+    alert(`Invalid data entered`);
 }else{
-    alert(`Well come!`)
-} 
-
+    alert(`Hello, ${firstName}! How are you?`)
+}
+ 
+console.log(firstName)
 // ------------ 2 Task ------------
 
 
@@ -17,20 +16,35 @@ const calkOperator = prompt(`Введите оператор - + * /`);
 const calkNumTwo = prompt(`Введите второе число`);
 
 let calcResult 
-
-if (calkOperator === "/"){
-    calcResult = calkNumOne / calkNumTwo
-}else if(calkOperator === "*"){
-    calcResult = calkNumOne * calkNumTwo
-}else if(calkOperator === "+"){
-    calcResult = Number(calkNumOne) + Number(calkNumTwo)
-}else if(calkOperator === "-"){
-    calcResult = calkNumOne - calkNumTwo
+if (calkNumOne !== null && calkNumTwo !== null && !isNaN(calkNumOne) && !isNaN(calkNumTwo) && calkNumOne !== "" && calkNumTwo !== ""){
+    
+    if(calkOperator !== null || calkOperator !== "" || !isNaN(calkOperator)){
+        if (calkOperator === "/"){
+            if(calkNumTwo === "0"){
+                alert('На ноль делить нельзя')
+            }else{
+                calcResult = calkNumOne / calkNumTwo
+                alert(calcResult);
+            }
+        }else if(calkOperator === "*"){
+            calcResult = calkNumOne * calkNumTwo
+            alert(calcResult);
+        }else if(calkOperator === "+"){
+            calcResult = calkNumOne + calkNumTwo
+            alert(calcResult);
+        }else if(calkOperator === "-"){
+            calcResult = calkNumOne - calkNumTwo
+            alert(calcResult);
+    
+        }else{
+            alert("Ops, Samsing wrong")
+        }
+    }
+}else{
+    alert("Ops, Samsing wrong")
 }
-calcResult = isNaN(calcResult) ? alert(`Введены неверные значения`) : alert(calcResult);
 
-
-// ------------ 3 Task ------------
+// // ------------ 3 Task ------------
 const numOne = prompt("Введите число 'a'");
 const numTwo = prompt("Введите число 'b'");
 
@@ -40,17 +54,21 @@ if (numOne === numTwo){
     alert('false')
 }
 
-// ------------ 4 Task ------------
+// // ------------ 4 Task ------------
 
-const entryNum = prompt ('Enter five number');
+let entryNum = prompt('Enter five number');
 let resultEntryNum;
-if (entryNum < 9999 || entryNum > 99999 || isNaN(entryNum) ){
-    alert(`Error, entered a number exceeding five digits`)
-}else if(entryNum > -100000 || entryNum < -9999){
-    resultEntryNum = String("-" + (Math.floor((entryNum % 100000) / 10000))+" "+(Math.floor((entryNum % 10000) / 1000))+" "+(Math.floor((entryNum % 1000) / 100))+" "+(Math.floor((entryNum % 100) / 10))+" "+(Math.floor((entryNum % 10) / 1)));
-    alert(`результат: ${resultEntryNum}`);
-}else{
+if(entryNum === null || entryNum === ""){
+    alert("Ops, whrites 0 or empty entry")
+}else if (!isNaN(entryNum) && entryNum.length === 5  && entryNum[0] > 0){
     resultEntryNum = String((Math.floor((entryNum % 100000) / 10000))+" "+(Math.floor((entryNum % 10000) / 1000))+" "+(Math.floor((entryNum % 1000) / 100))+" "+(Math.floor((entryNum % 100) / 10))+" "+(Math.floor((entryNum % 10) / 1)));
     alert(`результат: ${resultEntryNum}`);
+}else if(entryNum.length === 6 && entryNum[0] === "-" && !isNaN(entryNum) && entryNum[1] > 0){
+    entryNum = entryNum * -1
+    resultEntryNum = String("-"+(Math.floor((entryNum % 100000) / 10000))+" "+(Math.floor((entryNum % 10000) / 1000))+" "+(Math.floor((entryNum % 1000) / 100))+" "+(Math.floor((entryNum % 100) / 10))+" "+(Math.floor((entryNum % 10) / 1)));
+alert(`результат: ${resultEntryNum}`);
+}
+else{
+    alert("Ops, Samsing wrong")
 }
 
