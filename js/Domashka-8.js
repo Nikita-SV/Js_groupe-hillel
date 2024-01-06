@@ -6,7 +6,7 @@ function showSumNum(arrWhithNum){
         alert('Ops... Okey.')
     }
 
-    else if(!arrWhithNum){
+    else if(!arrWhithNum.trim()){
         alert("Nothing entered")
     }
     
