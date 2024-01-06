@@ -8,26 +8,23 @@ for(let i = 0;i<numbers.length;i++){
         quantity++
     }
 }
-console.log(`Сумма положительных чисел ${sum}, а количество ${quantity}`)
 //---
-let max = 0
 let indexMax = 0
+let max = numbers[0]
 for(let i = 0; i<numbers.length;i++){
     if (max < numbers[i]){
-        max = numbers[i]
-        indexMax = i
+    max = numbers[i]
+    indexMax = i
     }
 }
-console.log(`Максимальное число является ${max}, а его индекс ${indexMax}`)
 //---
 let negativeNum = 0
-let n = 0
+const n = 0
 for(let i = 0; i < numbers.length;i++){
     if (n > numbers[i]){
         negativeNum++
     }
 }
-console.log(`количество негативных чисел ${negativeNum}`)
 //---
 let oddPositiveCount = 0;
 let sumOddPositive = 0;
@@ -41,8 +38,6 @@ for(let i = 0; i < numbers.length; i++) {
     }
 }
 
-console.log("Количество положительных нечетных элементов: " + oddPositiveCount);
-console.log("Сумма положительных нечетных элементов: " + sumOddPositive);
 //--
 let evenPositiveCount = 0;
 let sumEvenPositive = 0;
@@ -55,11 +50,6 @@ for(let i = 0; i < numbers.length; i++) {
         }
     }
 }
-
-console.log("Количество положительных четных элементов: " + evenPositiveCount);
-console.log("Сумма положительных четных элементов: " + sumEvenPositive);
-
-
 //----
 let multiplication = 1;
 for(let i = 0;i<numbers.length;i++){
@@ -67,4 +57,12 @@ for(let i = 0;i<numbers.length;i++){
         multiplication *= numbers[i]
     }
 }
-console.log(`Добуток ровняется ${multiplication}`)
+alert
+(`Сумма положительных чисел ${sum}, а количество ${quantity};
+Максимальное число является ${max}, а его индекс ${indexMax};
+Количество негативных чисел ${negativeNum};
+Количество положительных нечетных элементов: ${oddPositiveCount};
+Сумма положительных нечетных элементов: ${sumOddPositive};
+Количество положительных четных элементов: ${evenPositiveCount};
+Сумма положительных четных элементов: ${sumEvenPositive};
+Добуток ровняется ${multiplication}`)

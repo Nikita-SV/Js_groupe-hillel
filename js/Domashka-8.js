@@ -12,7 +12,7 @@ function showSumNum(arrWhithNum){
     
     else{
         const newArr = arrWhithNum.split(",");
-        for(itemArr of newArr){
+        for(let itemArr of newArr){
             if(!isNaN(+itemArr)){
                 sumNum += +itemArr
             }
