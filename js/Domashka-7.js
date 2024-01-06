@@ -4,12 +4,13 @@ function removeElement(arrayInput, item){
     for (let removeItem of arrayInput){
         if (removeItem === item){
             arrayInput.splice(j , 1);
+            j++
         }else{
             j++;
         }
     }
+    return console.log(arrayInput)
 }
 
 removeElement(array, 5);
-console.log(array)
 // Результат: [1, '2', 3, '5', 4, 6, '7']

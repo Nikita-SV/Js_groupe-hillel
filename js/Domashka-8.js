@@ -3,11 +3,11 @@ const inputArr = prompt('Enter values separated by " , " :')
 function showSumNum(arrWhithNum){
     let sumNum = 0;
     if(arrWhithNum === null){
-        alert('Ops... Okey.')
+        return alert('Ops... Okey.')
     }
 
     else if(!arrWhithNum.trim()){
-        alert("Nothing entered")
+        return alert("Nothing entered")
     }
     
     else{
