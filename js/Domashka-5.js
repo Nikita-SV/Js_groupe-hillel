@@ -37,7 +37,7 @@ else{
 const inputNumForTree = prompt('Введите число');
 const numTree = 3;
 let resultNumTree = 0;
-if (!inputNumForTree?.trim() || isNaN(inputNumForTree) /*|| !+inputNumForTree*/){
+if (!inputNumForTree?.trim() || isNaN(inputNumForTree)){
     alert(`Не валидные данные`)
 }else{
     const inputNumForTreeConvert = +inputNumForTree

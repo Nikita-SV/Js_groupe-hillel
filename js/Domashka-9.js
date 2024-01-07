@@ -1,8 +1,7 @@
-function sumValue(val = 0){
-    let x = val
-    return function(num = 0){
-        return x += num
-    }
+function sumValue(val){
+    return function(num){
+        return val += num
+    }   
 }
 const updateNum = sumValue(0);
 
