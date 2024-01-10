@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.header{
+    position: sticky;
+    top: 0;
+    min-height: 50px;
+
+    display: flex;
+    background: #848484;
+    z-index: 20;
+}
+
+.header_text{
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #ffd85b;
+
+}
+
+.list_for_HomeWork{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1000px;
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+
+    margin: 100px auto;
+    border-radius: 20px;
+    background-color: #d7d7d7;
+    box-shadow: #757575 10px 10px 20px;
+    padding: 30px;
+
+}
+
+.list_for_HomeWork > a > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    min-height: 50px;
+    padding: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: cadetblue;
+    font-size: 20px;
+
+    transition: all 0.4s ease-in-out;
+
+}
+.list_for_HomeWork > a > li:hover {
+    background: #FFF;
+    color: #000;
+
+}
