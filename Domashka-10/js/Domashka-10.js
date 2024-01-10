@@ -2,7 +2,7 @@ const baseNum = prompt('Введите число которое нужно во
 const degree = prompt('Введите степень:') 
 
 
-function checkValue (checkBase, checkDegree){
+function checkValue(checkBase, checkDegree){
     const numBase = +checkBase
     const numDegree = +checkDegree
     let result = numBase;
@@ -27,11 +27,8 @@ function checkValue (checkBase, checkDegree){
     }
 
     else{
-        
-        
         return pow(numBase,numDegree)
     }
-
     function pow(base, degree){
         if (degree > 0){
             counter++
